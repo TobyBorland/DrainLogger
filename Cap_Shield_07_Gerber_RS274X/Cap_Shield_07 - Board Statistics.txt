@@ -1,0 +1,56 @@
+Ultiboard Information Export File
+
+Design Name  : LM555+LMC6481+4060_arduino_NOV12e(LM555+LMC6481+4060_arduino_NOV12) - Board Statistics
+Report Date  : 15 November 2012
+Report Time  : 20:44
+--------------------------------------------------------------------------------
+
+                                                                                                     
+
+STATISTICS                                                                                           
+Parts :                                46                                                            
+Vias :                                  0                                                            
+Pins :                                177                                                            
+Test pins :                             0                                                            
+Jumpers :                               0                                                            
+Nets :                                 54                                                            
+Pins in net :                         174                                                            
+Connections :                         121                                                            
+Unrouted connections :                  0                                                            
+Router completion rate :              100 %                                                          
+                                                                                                     
+                                                                                                     
+BOARD OUTLINE                                                                                        
+Length (x) :                    53.848000 mm                                                         
+Width  (y) :                    68.580000 mm                                                         
+                                                                                                     
+                                                                                                     
+BOARD LAYERS                                                                                         
+Copper Top                                                                                           
+Copper Bottom                                                                                        
+Keep-in/keep-out                                                                                     
+Board Outline                                                                                        
+Silkscreen Top                                                                                       
+Silkscreen Bottom                                                                                    
+3D-Info Top                                                                                          
+3D-Info Bottom                                                                                       
+Paste Mask Top                                                                                       
+Paste Mask Bottom                                                                                    
+Solder Mask Top                                                                                      
+Solder Mask Bottom                                                                                   
+Glue Mask Top                                                                                        
+Glue Mask Bottom                                                                                     
+Ratsnest                                                                                             
+Design Rule Check                                                                                    
+Force Vectors                                                                                        
+Comment                                                                                              
+Mechanical 1                                                                                         
+Mechanical 2                                                                                         
+Holes                                                                                                
+Outline                                                                                              
+                                                                                                     
+                                                                                                     
+ERROR MESSAGES                                                                                       
+No errors                                                                                            
+                                                                                                     
+                                                                                                     

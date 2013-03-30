@@ -1,0 +1,26 @@
+ULTIBOARD DRILL REPORT
+
+Design: drainlogger_PSU_02(drainlogger_PSU)
+
+DRILL FILE SETTINGS
+Excellon 2, Absolute, Inch, 2.5 
+
+
+DEFINITION COPPER LAYERS
+Copper Top
+Copper Bottom
+
+
+--------------------------------------------------------------------
+
+DRILLFILE                                                            LAMINATION
+drainlogger_PSU_02(drainlogger_PSU) - Copper Top-Copper Bottom.drl   Copper Top .. Copper Bottom
+
+TOOL     SIZE   TYPE  COUNT
+   1  0.11811   NPTH      2
+   2  0.03500    PTH     27
+   3  0.04331    PTH      2
+   4  0.04724    PTH      2
+   5  0.03543    PTH      6
+   6  0.04333    PTH      3
+   7  0.05083    PTH      3
