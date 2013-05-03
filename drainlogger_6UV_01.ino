@@ -1,8 +1,31 @@
+/*
+drainlogger.ino is the program operating a capacitive water level sensing
+hardware design developed at the Sustainability Institute at the University 
+of East London. 
+
+Copyright Toby Borland 2012-2013
+
+This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
 // Arduino drainlogger 0.0.6UV - V-notch/Uno variant
 // Sustainability Research Institute, University of East London
 // Toby Borland with contribution from Ertion Axha, Gertz, DeJusto
 // tobyborland@hotmail.com
 // XINO SERIAL 9600 BAUD OVER DUEMILANOVE BOARD OK
+// Xino => set board type to Arduino Uno
+#define SENSOR_IDENTIFIER "Unit:            0000"
 
 // Hazen-Williams friction head loss empirical formula: f = (10.67*(100/c)^1.85*q^1.85)*D_h^-4.87 (SI units)
 // f = friction head, c = Hazen-Williams roughness constant, q = volume flow, D_h = inside hydraulic diameter
@@ -39,7 +62,6 @@ SoftI2cMaster i2c(RTC_SDA_PIN, RTC_SCL_PIN);
 // enable pull-ups on SDA/SCL
 TwiMaster i2c(true);
 #endif  // defined(__AVR_ATmega1280__) || defined(__AVR_ATmega2560__)
-
 
 // RTC pins commandeered on ladyada logshield
 // RTC_SCL - A4
@@ -111,7 +133,7 @@ volatile unsigned long WDT_catch; // always less than 8000, but requires millis(
 int signal_check;
 byte i;
 
-unsigned int JITTER = 2;//_______________________________FINE_TUNE
+unsigned int JITTER = 2;//___________________________FINE_TUNE
 // unsuited as an exit condition for temperature calibration?
 
 unsigned int NO_WATER = 60; // if the meter dries out, there is stray capacitance_________CHECK VALUE
@@ -960,6 +982,7 @@ void loop(void)
     f_name = uniqueLogFileName();
     logfile = createLogFile(f_name); 
     logfile.println(F("Rev:0.6.0,   S.RUISLIP"));
+    logfile.println(F(SENSOR_IDENTIFIER));
     logfile.println(F("temp:C,power:V,cond:mS"));
     f_tbc = formatTBC(getTemp(), getPowerVoltage(), getSiemens());
     logfile.println(f_tbc);
@@ -970,6 +993,7 @@ void loop(void)
     Serial.print(F("Logfile created: ")); 
     Serial.println(f_name);
     Serial.println(F("Rev:0.6.0,   S.RUISLIP"));
+    Serial.println(F(SENSOR_IDENTIFIER));
     Serial.println(F("yyyymmddThhmmss,dm^3/s"));
     Serial.println(f_tbc);
   #endif
